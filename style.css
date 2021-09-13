@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
+:root {
+  /* color */
+  --color-background: #EEEBE5;
+}
 
 body {
   /* 핸드폰에 있는 상태바를 표현한 것 */
   margin-top: 44px; 
   font-family: 'Noto Sans KR', sans-serif;
+
+  background-color: var(--color-background);
 
   /* 핸드폰 디스플레이용, 나중에 지워야 함 */
   width: 375px;
@@ -12,9 +18,9 @@ body {
   margin-left: 50px;
 }
 
-header > ul {
-  /* border: 1px solid green; */
+/* HEADER */
 
+header > ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
