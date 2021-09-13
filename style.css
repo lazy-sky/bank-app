@@ -5,4 +5,38 @@ body {
   /* 핸드폰에 있는 상태바를 표현한 것 */
   margin-top: 44px; 
   font-family: 'Noto Sans KR', sans-serif;
+
+  /* 핸드폰 디스플레이용, 나중에 지워야 함 */
+  width: 375px;
+  border: 1px solid black;
+  margin-left: 50px;
+}
+
+header > ul {
+  /* border: 1px solid green; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-left: 27px;
+  margin-right: 21px;
+}
+
+header .header-profile > img {
+  width: 43px;
+  height: 43px;
+}
+
+header .header-title {
+  vertical-align: middle;
+}
+
+header .header-option {
+  display: flex;
+}
+
+.header-option img {
+  height: 21px;
+  margin-left: 22px;
 }
