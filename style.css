@@ -105,7 +105,42 @@ header .header-option {
 }
 
 .account-graphic {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-graphic input {
+  -webkit-appearance: none;
+
+  width: 70%;
+  height: 6px;
+  border-radius: 3px;
+  vertical-align: center;
+
+  background-color: #C4C4C4;
+}
+
+.account-graphic input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 17px;
+  background: #FF5F00;
+}
+
+.account-spent {
+  float: left;
+  position: absolute;
+  left: 135px;
+  border-radius: 3px 0 0 3px;
+
+  background-color: red;
+  height: 6px;
+  width: 100px;
+}
+
+.account-graphic img {
+  width: 14px;
 }
 
 .account-notice {
