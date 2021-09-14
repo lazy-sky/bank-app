@@ -46,3 +46,69 @@ header .header-option {
   height: 21px;
   margin-left: 22px;
 }
+
+/* MAIN */
+
+.account-container {
+  background: #FFFFFF;
+  
+  box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+  border-radius: 12px;
+
+  margin: 33px 48px 48px 24px;
+  padding: 6px 2px;
+}
+
+.account-list {
+  position: relative;
+
+  height: 21px;
+
+  margin-top: 14px;
+
+  font-size: 14px;
+}
+
+
+.account-number {
+  text-align: center;
+  line-height: 21px;
+  margin: auto;
+  
+  color: #858585;
+}
+
+.account-transfer {
+  border: none;
+
+  position: absolute;
+  top: 0;
+  right: 17px;
+
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.account-balance {
+  margin: 16px auto;
+
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.account-graphic {
+  text-align: center;
+}
+
+.account-notice {
+  text-align: center;
+  
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
