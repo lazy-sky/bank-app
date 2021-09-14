@@ -140,8 +140,90 @@ header .header-option {
 
 img.scroll-bar {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 14px; 
   padding: 4px;
+}
+
+/* Transaction */
+
+.transaction-save {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.transaction-save-item {
+  width: 48%;
+  background: #DADADA;
+  border-radius: 6px;
+}
+
+.transaction-save-item > .transaction-save-item-filled {
+  /* 이후에 계산으로 수정 */
+  width: 60%;
+
+  padding: 5px 13px;
+
+  border-radius: 6px 0px 0px 6px;
+
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: white;
+}
+
+.transaction-save-item-filled.color-orange {
+  background: #FF5F00;
+}
+
+.transaction-save-item-filled.color-yellow {
+  background-color: #FEB700;
+}
+
+.transaction-day {
+  width: 80%;
+  margin: 16px auto 0;
+}
+
+.transaction-day-summary {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.transaction-day-summary > .transaction-day-title {
+  font-weight: bold;
+}
+
+.transaction-day-summary > .transaction-day-amount {
+  font-weight: 500;
+  color: #B4B4B4;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #444444;
+}
+
+.transaction-item-name {
+  font-weight: 350;
+}
+
+.transaction-item-price {
+  font-weight: 300;
 }
 
 /* FOOTER */
@@ -151,7 +233,7 @@ footer {
 }
 
 .tab-menu {
-  height: 75px;
+  height: 76px;
 
   display: flex;
   justify-content: space-around;
