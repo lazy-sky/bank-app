@@ -49,6 +49,8 @@ header .header-option {
 
 /* MAIN */
 
+/* Account */
+
 .account-container {
   background: #FFFFFF;
   
@@ -116,6 +118,8 @@ header .header-option {
 .ad {
   text-align: center;
 
+  margin-bottom: 21px;
+
   font-family: Noto Sans CJK KR;
   font-style: normal;
   font-weight: 500;
@@ -125,4 +129,36 @@ header .header-option {
 
 .ad-link {
   text-decoration-line: underline;
+}
+
+.transaction-container {
+  background: #F5F5F5;
+
+  box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+  border-radius: 30px 30px 0px 0px;
+}
+
+img.scroll-bar {
+  display: block;
+  margin: 0 auto;
+  padding: 4px;
+}
+
+/* FOOTER */
+
+footer {
+  background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+}
+
+.tab-menu {
+  height: 75px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab-menu-item img {
+  width: 20px;
+  color:white;
 }
