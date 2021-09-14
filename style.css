@@ -55,7 +55,7 @@ header .header-option {
   box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
   border-radius: 12px;
 
-  margin: 33px 48px 48px 24px;
+  margin: 33px 48px 24px 48px;
   padding: 6px 2px;
 }
 
@@ -111,4 +111,18 @@ header .header-option {
   
   margin-top: 12px;
   margin-bottom: 6px;
+}
+
+.ad {
+  text-align: center;
+
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.ad-link {
+  text-decoration-line: underline;
 }
