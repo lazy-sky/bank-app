@@ -132,7 +132,7 @@ header .header-option {
  .account-spent {
   float: left;
   position: absolute;
-  left: 135px;
+  left: 84px;
   border-radius: 3px 0 0 3px;
 
   background-color: #FFDB4C;
@@ -366,8 +366,8 @@ body > h2 {
 .standard-setting .account-spent {
   float: left;
   position: absolute;
-  left: 31px;
-  top: 127px;
+  left: 30px;
+  top: 170px;
 
   border-radius: 3px 0 0 3px;
 
