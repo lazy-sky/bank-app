@@ -6,8 +6,9 @@
 }
 
 body {
+  position: relative;
   /* 핸드폰에 있는 상태바를 표현한 것 */
-  margin-top: 44px; 
+  padding-top: 44px; 
   font-family: 'Noto Sans KR', sans-serif;
 
   background-color: var(--color-background);
@@ -15,7 +16,7 @@ body {
   /* 핸드폰 디스플레이용, 나중에 지워야 함 */
   width: 375px;
   border: 1px solid black;
-  margin-left: 50px;
+  margin: 50px;
 }
 
 /* HEADER */
@@ -128,7 +129,7 @@ header .header-option {
   background: #FF5F00;
 }
 
-.account-spent {
+ .account-spent {
   float: left;
   position: absolute;
   left: 135px;
@@ -167,6 +168,9 @@ header .header-option {
 }
 
 .transaction-container {
+  /* height: 500px; */
+  /* overflow: hidden; */
+
   background: #F5F5F5;
 
   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
@@ -278,4 +282,104 @@ footer {
 .tab-menu-item img {
   width: 20px;
   color:white;
+}
+
+/* chart.html */
+
+button.close {
+  border: none;
+  position: absolute;
+  right: 13px;
+  top: 1px;
+
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+body > h2 { 
+  margin: 12px auto 12px 30px;
+
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.standard-setting {
+  margin-left: 30px;
+  margin-right: 37px;
+}
+
+.standard-setting > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.standard-setting > div > p {
+  display: inline-block;
+
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.standard-setting > div > p:nth-child(1) {
+  font-size: 18px;
+  line-height: 27px;
+  color: #444444;
+}
+
+.standard-setting > div > p:nth-child(2) {
+  font-size: 24px;
+  line-height: 36px;
+  color: #FF5F00;
+}
+
+.standard-setting input.slidebar {
+  -webkit-appearance: none;
+
+  display: block;
+  margin: 0 auto;
+
+  width: 100%;
+  height: 9px;
+  border-radius: 3px;
+  
+  margin-top: 30px;
+
+  background-color: #C4C4C4;
+}
+
+.standard-setting input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 28px;
+  background: #FF5F00;
+  border-radius: 2px;
+}
+
+.standard-setting .account-spent {
+  float: left;
+  position: absolute;
+  left: 31px;
+  top: 127px;
+
+  border-radius: 3px 0 0 3px;
+
+  background-color: #FFDB4C;
+  height: 9px;
+  width: 100px;
+}
+
+section.daily-report {
+  margin: 60px 30px;
+}
+
+section.spending-pattern {
+  margin: 60px 30px;
 }

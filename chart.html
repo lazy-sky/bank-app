@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Chart Tab</title>
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="./reportChart.js"></script>
+  <script defer src="./patternChart.js"></script>
 </head>
 <body>
   <button class="close">
@@ -17,18 +20,22 @@
   <!-- 메인 -->
   <main>
     <section class="standard-setting">
-      <p>기준금액설정</p>
-      <p>2,100,000원</p>
+      <div>
+        <p>기준금액설정</p>
+        <p>2,100,000원</p>
+      </div>
       <input type="range" class="slidebar"></input>
       <div class="account-spent"></div>
     </section>
 
     <section class="daily-report">
-      chart js 이용하는 부분
+      <h3>일간 리포트</h3>
+      <canvas id="reportChart" ></canvas>
     </section>
 
     <section class="spending-pattern">
-
+      <h3>6월 지출 패턴</h3>
+      <canvas id="patternChart" ></canvas>
     </section>
   </main>
 
@@ -36,7 +43,7 @@
   <footer>
     <ul class="tab-menu">
       <li class="tab-menu-item">
-        <a href="javascript:void(0)">
+        <a href="./index.html">
           <img src="./assets/tab-menu-item(1).svg" alt="tab-menu1">
         </a>
       </li>
