@@ -288,6 +288,7 @@ footer {
 
 button.close {
   border: none;
+  background-color: inherit;
   position: absolute;
   right: 13px;
   top: 1px;
