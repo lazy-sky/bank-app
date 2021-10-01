@@ -129,7 +129,7 @@ header .header-option {
   background: #FF5F00;
 }
 
- .account-spent {
+.account-spent {
   float: left;
   position: absolute;
   left: 84px;
@@ -168,13 +168,18 @@ header .header-option {
 }
 
 .transaction-container {
-  /* height: 500px; */
-  /* overflow: hidden; */
+  height: 60vh;
+
+  overflow: scroll;
 
   background: #F5F5F5;
 
   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
   border-radius: 30px 30px 0px 0px;
+}
+
+.transaction-container::-webkit-scrollbar { 
+  display: none; 
 }
 
 img.scroll-bar {
@@ -263,6 +268,10 @@ img.scroll-bar {
 
 .transaction-item-price {
   font-weight: 300;
+}
+
+.income {
+  color: #FF5F00;
 }
 
 /* FOOTER */
