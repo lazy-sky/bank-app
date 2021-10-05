@@ -1,24 +1,24 @@
 const reportCtx = document.getElementById('reportChart').getContext('2d');
 
-const reportChart = new Chart(reportCtx, {
-  type: 'bar',
-  data: {
-      labels: ['02', '04', '06', '08', '10', '12', '14', '16', '18'],
-      
-      datasets: [{
-          data: [78000, 90000, 72000, 90000, 77000, 70000, 98000, 72000, 97000],
-  
-          backgroundColor: '#38C976',
-          width: 0.1,
-          borderRadius: 4,
-          barThickness: 5,
-          
-      }]
-  },
+const labels = ['02', '04', '06', '08', '10', '12', '14', '16', '18'];
+const data = {
+  labels,
+  datasets: [{
+    label: 'Erase this label',
+    backgroundColor: '#38C976',
+    width: 0.1,
+    borderRadius: 4,
+    barThickness: 5,
+    data: [78000, 90000, 72000, 90000, 77000, 70000, 98000, 72000, 97000],
+  }],
+};
 
+const reportConfig = {
+  type: 'bar',
+  data,
   options: {
     legend: {
-      display: false
+      display: false,
     },
 
     title: {
@@ -35,10 +35,25 @@ const reportChart = new Chart(reportCtx, {
 
       x: {
         grid: {
-          color: "transparent",
+          color: 'transparent',
         },
       },
     },
   },
+};
+
+const reportChart = new Chart(reportCtx, {
+  type: 'bar',
+  data: {
+    labels,
+    datasets: data.datasets,
+  },
+
+  options: {
+    legend: {
+      display: false,
+    },
+  },
 });
 
+// export default reportChart;
