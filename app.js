@@ -1,4 +1,4 @@
-// const transactionContainer = document.querySelector('transaction-container');
+// const transactionContainer = document.getElementsByClassName('transaction-container')[0];
 const transactionList = document.getElementsByClassName('transaction-list')[0];
 
 transactionList.innerHTML = '';
@@ -8,6 +8,7 @@ transactionList.innerHTML = '';
 // 2. separating module, api
 
 let prevDate = '';
+let todaySum = 0;
 
 async function fetchData() {
   const url = 'https://syoon0624.github.io/json/test.json';
@@ -15,33 +16,52 @@ async function fetchData() {
   const data = await response.json();
   const { bankList } = data;
 
+  bankList.reverse();
+
   bankList.forEach((transaction) => {
-    let {
+    const {
       date,
       income,
       history,
-      price,
     } = transaction;
 
-    if (income === 'in') {
-      price = `+${price.toLocaleString()}`;
-    }
+    let { price } = transaction;
 
     // when date changes
     if (date !== prevDate) {
-      transactionList.innerHTML += '<hr>';
+      transactionList.innerHTML += `
+      <div class="transaction-day-summary">
+        <p class="transaction-day-title">${date}</p>
+        <p class="transaction-day-amount">${todaySum}원 지출</p>
+      </div>
+      `;
+
+      todaySum = 0;
+    }
+
+    if (income === 'in') {
+      todaySum -= price;
+      price = `+${price.toLocaleString()}`;
+
       transactionList.innerHTML += `
       <li class="transaction-item">
         <p class="transaction-item-name">${history}</p>
-        <p class="transaction-item-price income">${price.toLocaleString()}</p>
-      </li>`;
-    } else {
-      transactionList.innerHTML += `
-      <li class="transaction-item">
-        <p class="transaction-item-name">${history}</p>
-        <p class="transaction-item-price">${price.toLocaleString()}</p>
+        <p class="transaction-item-price income">${price}</p>
       </li>`;
     }
+
+    if (income === 'out') {
+      todaySum += price;
+      price = price.toLocaleString();
+
+      transactionList.innerHTML += `
+      <li class="transaction-item">
+        <p class="transaction-item-name">${history}</p>
+        <p class="transaction-item-price">${price}</p>
+      </li>`;
+    }
+
+    transactionList.innerHTML += '<hr>';
 
     prevDate = date;
   });
