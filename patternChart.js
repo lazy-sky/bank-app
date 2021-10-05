@@ -14,20 +14,19 @@ const patternChart = new Chart(patternCtx, {
         '#C4C4C4',
       ],
       borderWidth: 0,
-      cutout: "80%",
+      cutout: '80%',
     }],
   },
 
   options: {
     title: {
       display: true,
-      text: "World Wide Wine Production 2018"
+      text: 'World Wide Wine Production 2018',
     },
     legend: {
       display: true,
       boxWidth: 100,
       position: 'bottom',
-    }
+    },
   },
 });
-
