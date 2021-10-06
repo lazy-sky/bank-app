@@ -29,10 +29,17 @@ async function fetchData() {
 
     // when date changes
     if (date !== prevDate) {
+      if (todaySum < 0) {
+        todaySum *= -1;
+        todaySum = `${todaySum.toLocaleString()}원 수입`;
+      } else {
+        todaySum = `${todaySum.toLocaleString()}원 지출`;
+      }
+
       transactionList.innerHTML += `
       <div class="transaction-day-summary">
         <p class="transaction-day-title">${date}</p>
-        <p class="transaction-day-amount">${todaySum}원 지출</p>
+        <p class="transaction-day-amount">${todaySum}</p>
       </div>
       `;
 
